@@ -1,0 +1,12 @@
+.mbr-timeline-title {
+    background: #488dd8;
+    color: #fff;
+    padding: 10px 10px;
+    border: 1px solid #f8f9fa;
+}
+.mbr-timeline-text {
+    padding: 0 10px;
+    background: #f5f5f5;
+    color: #000;
+    text-align: justify;
+}
