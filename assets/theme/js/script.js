@@ -618,7 +618,7 @@
         var name    = document.getElementById('inputName');
         var email   = document.getElementById('inputEmail');
         var message = document.getElementById('inputMessage');
-        document.getElementById('inputMessage').value = message +"; Phone - " + document.getElementById('inputPhone').value;
+        document.getElementById('inputMessage').value = message.value +"; Phone - " + document.getElementById('inputPhone').value;
 
         if (!name.value || !email.value || !message.value) {
           alertify.error("Please check your entries");
