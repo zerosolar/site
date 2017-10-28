@@ -611,6 +611,32 @@
         }
     }
 
+    //Conact form submission
+
+    $(document).ready(function() {
+      $('#contact-form').submit(function(e) {
+        var name    = document.getElementById('inputName');
+        var email   = document.getElementById('inputEmail');
+        var message = document.getElementById('inputMessage');
+        document.getElementById('inputMessage').value = message +"; Phone - " + document.getElementById('inputPhone').value;
+
+        if (!name.value || !email.value || !message.value) {
+          alertify.error("Please check your entries");
+          return false;
+        } else {
+          $.ajax({
+            method: 'POST',
+            url: '//formspree.io/support@zerosolar.in',
+            data: $('#contact-form').serialize(),
+            datatype: 'json'
+          });
+          e.preventDefault();
+          $(this).get(0).reset();
+          alertify.success("Message sent");
+        }
+      });
+    });
+
     // Scroll to Top Button
     $(document).ready(function() {
         if ($('.mbr-arrow-up').length) {
@@ -714,6 +740,7 @@
             }
         });
     }
+
 
     // Script for popUp video
     $(document).ready(function() {

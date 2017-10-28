@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
-
-
+    <link rel="stylesheet" href="assets/alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="assets/alertifyjs/css/themes/default.min.css" />
 </head>
 
 <body>
@@ -330,32 +329,36 @@
                 <div class="media-container-column col-lg-8" data-form-type="formoid">
                     <div data-form-alert="" hidden="">Thanks for reaching us</div>
 
-                    <form class="mbr-form" action="#/" method="post" data-form-title="Mobirise Form"><input type="hidden" data-form-email="true" value="pj4nSXDzfh7tUTArN5+f/JPwGmxqjMDjRfSRtyVUelWdPq2GMCXAdqhhz+SjIHhRc4VRzWq+wvQYrhiw5gwuYnWS4VVKoZca5+k0qDHFPwtOUk67ORiTtJi/QxbqqT3o">
+                    <form class="mbr-form" data-form-title="Contact Form" id="contact-form">
+
                         <div class="row row-sm-offset">
                             <div class="col-md-4 multi-horizontal" data-for="name">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="name-form1-1c">Name</label>
-                                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-1c">
+                                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="inputName">
                                 </div>
                             </div>
                             <div class="col-md-4 multi-horizontal" data-for="email">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="email-form1-1c">Email</label>
-                                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="email-form1-1c">
+                                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" 
+                                    id="inputEmail">
                                 </div>
                             </div>
                             <div class="col-md-4 multi-horizontal" data-for="phone">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-1c">Phone</label>
-                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="phone-form1-1c">
+                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" 
+                                    id="inputPhone">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group" data-for="message">
                             <label class="form-control-label mbr-fonts-style display-7" for="message-form1-1c">Queries</label>
-                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-1c"></textarea>
+                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" 
+                            id="inputMessage"></textarea>
                         </div>
-
+                        <input type="text" name="_gotcha" style="display:none">
                         <span class="input-group-btn">
                             <button href="" type="submit" class="btn btn-primary btn-form display-4">Submit</button>
                         </span>
@@ -453,7 +456,7 @@
     <script src="assets/theme/js/script.js"></script>
     <script src="assets/formoid/formoid.min.js"></script>
     <script src="assets/mobirise-slider-video/script.js"></script>
-
+    <script src="assets/alertifyjs/alertify.min.js"></script>
 
     <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbri-down mbr-iconfont"></i></a></div>
     <input name="animation" type="hidden">
