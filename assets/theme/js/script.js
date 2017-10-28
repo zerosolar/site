@@ -626,9 +626,18 @@
         } else {
           $.ajax({
             method: 'POST',
-            url: '//formspree.io/support@zerosolar.in',
+            url: 'https://zerosolarapi.000webhostapp.com/mail.php',
             data: $('#contact-form').serialize(),
             datatype: 'json'
+            // success: function (resdata) {
+            //     //$("#recaptca").html(resdata);
+            //     $('#card #header').remove()
+            //     $('#card h1').remove();
+            //     $('#card p').remove();
+            // },
+            // error: function (error) {
+            //     alertify.error('error; ' + eval(error));
+            // }
           });
           e.preventDefault();
           $(this).get(0).reset();
